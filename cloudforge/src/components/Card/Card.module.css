@@ -1,0 +1,10 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.glow {
+  box-shadow: var(--shadow-glow-accent);
+}

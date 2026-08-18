@@ -1,0 +1,125 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 120px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 200;
+  background-image:
+    radial-gradient(circle, var(--accent) 2px, transparent 2px),
+    radial-gradient(circle, var(--accent-cool) 2px, transparent 2px),
+    radial-gradient(circle, var(--success) 1.5px, transparent 1.5px),
+    radial-gradient(circle, var(--accent) 1.5px, transparent 1.5px);
+  background-size: 80px 80px, 60px 60px, 90px 90px, 70px 70px;
+  background-position: 0 0, 40px 40px, 20px 60px, 60px 20px;
+  animation: confettiFall 1.5s ease-out forwards;
+  opacity: 0.7;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.levelUp {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  background: var(--accent-muted);
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  animation: levelPulse 2s ease-in-out;
+}
+
+@keyframes levelPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.complete {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--success);
+  line-height: 1.1;
+}
+
+.questName {
+  font-size: 1.375rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.score {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.xp {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skillsTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti {
+    display: none;
+  }
+
+  .levelUp {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 100px 16px 40px;
+  }
+
+  .complete {
+    font-size: 2.25rem;
+  }
+}

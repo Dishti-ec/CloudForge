@@ -1,0 +1,42 @@
+.questCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.difficulty {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--warning-muted);
+  color: var(--warning);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.progressSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}

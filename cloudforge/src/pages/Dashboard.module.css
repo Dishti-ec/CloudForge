@@ -1,0 +1,48 @@
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.welcome {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.xpSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.xpLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 84px 16px 40px;
+  }
+}

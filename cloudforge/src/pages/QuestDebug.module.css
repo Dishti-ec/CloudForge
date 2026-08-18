@@ -1,0 +1,159 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.banner {
+  width: 100%;
+  background: var(--error-muted);
+  border: 1px solid var(--error);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.bannerText {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--error);
+  line-height: 1.2;
+}
+
+.bannerEmoji {
+  animation: pulse 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusLabel {
+  color: var(--text-secondary);
+}
+
+.statusError {
+  border-color: var(--error);
+}
+
+.statusOk {
+  border-color: var(--border);
+}
+
+.answersCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.attemptCounter {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.explanationCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subLabel {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: 2px solid var(--accent-cool);
+  outline-offset: 2px;
+  border-color: var(--accent-cool);
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.resultsNav {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 84px 16px 40px;
+  }
+
+  .bannerText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bannerEmoji {
+    animation: none;
+  }
+}

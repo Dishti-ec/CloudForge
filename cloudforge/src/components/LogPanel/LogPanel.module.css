@@ -1,0 +1,18 @@
+.panel {
+  background: #05070C;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--error);
+  overflow-x: auto;
+}
+
+.line {
+  margin: 0;
+  padding: 2px 0;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-all;
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Delivers a sleek, modern landing page design that enhances user engagement and effectively showcases your brand to attract and convert visitors.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

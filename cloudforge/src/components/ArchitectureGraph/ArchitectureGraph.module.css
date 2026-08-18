@@ -1,0 +1,86 @@
+.graph {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.segment {
+  display: flex;
+  align-items: center;
+}
+
+.vertical .segment {
+  flex-direction: column;
+}
+
+.connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: var(--border-hover);
+  position: relative;
+}
+
+.connector::before {
+  content: '';
+  position: absolute;
+  background: var(--border);
+  border-radius: 1px;
+}
+
+.horizontal .connector::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vertical .connector::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.connectorError {
+  color: var(--error);
+}
+
+.connectorError::before {
+  background: var(--error);
+  animation: dashFlow 2s linear infinite;
+}
+
+@keyframes dashFlow {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connectorError::before {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .horizontal {
+    flex-direction: column;
+  }
+
+  .horizontal .segment {
+    flex-direction: column;
+  }
+}

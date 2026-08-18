@@ -1,0 +1,80 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 16px;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.scenario {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.mission {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.missionItem {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+.missionItem::before {
+  content: '○';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cool);
+}
+
+.ctaRow {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    order: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 84px 16px 40px;
+  }
+}

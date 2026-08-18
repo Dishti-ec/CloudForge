@@ -1,0 +1,61 @@
+.card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--accent-cool);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 640px;
+  cursor: pointer;
+}
+
+.hint {
+  border-color: var(--accent-cool);
+}
+
+.success {
+  border-color: var(--success);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-cool-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.cursor {
+  color: var(--accent-cool);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

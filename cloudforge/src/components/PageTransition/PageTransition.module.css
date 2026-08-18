@@ -1,0 +1,24 @@
+.wrapper {
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.entering {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper {
+    transition: none;
+  }
+
+  .entering {
+    opacity: 1;
+    transform: none;
+  }
+}
